@@ -22,6 +22,7 @@ return {
 
         keymap("n", "gD", vim.lsp.buf.declaration, attach_opts)
         keymap("n", "gd", vim.lsp.buf.definition, attach_opts)
+        keymap("n", "gr", require("telescope.builtin").lsp_references, attach_opts)
         keymap("n", "K", vim.lsp.buf.hover, attach_opts)
         keymap("n", "gi", vim.lsp.buf.implementation, attach_opts)
         keymap("n", "<C-s>", vim.lsp.buf.signature_help, attach_opts)
@@ -33,7 +34,6 @@ return {
         end, attach_opts)
         keymap("n", "<leader>D", vim.lsp.buf.type_definition, attach_opts)
         keymap("n", "<leader>rn", vim.lsp.buf.rename, attach_opts)
-        keymap("n", "so", require("telescope.builtin").lsp_references, attach_opts)
       end
 
       -- nvim-cmp supports additional completion capabilities
