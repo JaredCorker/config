@@ -22,5 +22,7 @@ opt.sidescrolloff = 8
 
 opt.confirm = true
 
-vim.opt.undodir = os.getenv("HOME") .. "/.local/state/nvim/undodir"
-vim.opt.undofile = true
+opt.undodir = os.getenv("HOME") .. "/.local/state/nvim/undodir"
+opt.undofile = true
+
+opt.splitright = true
