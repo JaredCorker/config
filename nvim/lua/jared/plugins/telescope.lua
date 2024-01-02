@@ -9,6 +9,7 @@ return {
     },
     config = function()
       local telescope = require("telescope")
+      local builtin = require("telescope.builtin")
       local actions = require("telescope.actions")
       local egrep_actions = require("telescope._extensions.egrepify.actions")
 
@@ -80,6 +81,7 @@ return {
       keymap("n", "<leader>fs", "<cmd>Telescope egrepify<cr>", { desc = "Find string in cwd" })
       keymap("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
       keymap("n", "<leader>fg", "<cmd>Telescope git_status<cr>", { desc = "Fuzzy find files with git changes" })
+      keymap("n", "<leader>fb", builtin.buffers, { desc = "Fuzzy find buffers" })
 
     end,
   },
