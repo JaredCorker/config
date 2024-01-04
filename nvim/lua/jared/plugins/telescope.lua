@@ -1,3 +1,22 @@
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "TelescopeResults",
+  callback = function(ctx)
+    vim.api.nvim_buf_call(ctx.buf, function()
+      vim.fn.matchadd("TelescopeParent", "\t\t.*$")
+      vim.api.nvim_set_hl(0, "TelescopeParent", { link = "Comment" })
+    end)
+  end,
+})
+
+local function filenameFirst(_, path)
+  local tail = vim.fs.basename(path)
+  local parent = vim.fs.dirname(path)
+  if parent == "." then
+    return tail
+  end
+  return string.format("%s\t\t%s", tail, parent)
+end
+
 return {
   {
     "nvim-telescope/telescope.nvim",
@@ -27,6 +46,10 @@ return {
         pickers = {
           find_files = {
             hidden = true,
+            path_display = filenameFirst,
+          },
+          oldfiles = {
+            path_display = filenameFirst,
           },
         },
         extensions = {
@@ -82,7 +105,6 @@ return {
       keymap("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
       keymap("n", "<leader>fg", "<cmd>Telescope git_status<cr>", { desc = "Fuzzy find files with git changes" })
       keymap("n", "<leader>fb", builtin.buffers, { desc = "Fuzzy find buffers" })
-
     end,
   },
   {
