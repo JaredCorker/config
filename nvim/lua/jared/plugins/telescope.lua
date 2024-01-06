@@ -103,7 +103,8 @@ return {
       keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
       keymap("n", "<leader>fs", "<cmd>Telescope egrepify<cr>", { desc = "Find string in cwd" })
       keymap("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
-      keymap("n", "<leader>fg", "<cmd>Telescope git_status<cr>", { desc = "Fuzzy find files with git changes" })
+      keymap("n", "<leader>fgg", "<cmd>Telescope git_files<cr>", { desc = "Fuzzy find files inside git repository" })
+      keymap("n", "<leader>fgc", "<cmd>Telescope git_status<cr>", { desc = "Fuzzy find files with git changes" })
       keymap("n", "<leader>fb", builtin.buffers, { desc = "Fuzzy find buffers" })
     end,
   },
