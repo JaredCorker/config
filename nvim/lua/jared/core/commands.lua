@@ -13,3 +13,9 @@ autocmd('TextYankPost', {
     })
   end,
 })
+
+autocmd('BufWritePre', {
+  pattern = { '*.tsx', '*.ts', '*.jsx', '*.js' },
+  command = 'silent! EslintFixAll',
+  group = augroup('Format', {}),
+})

@@ -9,7 +9,7 @@ return {
       ensure_installed = {
         "lua_ls",
         "tsserver",
-        "graphql",
+        "eslint",
       },
     },
   },
@@ -55,6 +55,11 @@ return {
       })
 
       lspconfig.tsserver.setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+      })
+
+      lspconfig.eslint.setup({
         on_attach = on_attach,
         capabilities = capabilities,
       })
