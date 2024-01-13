@@ -1,21 +1,29 @@
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
-local yank_group = augroup('HighlightYank', {})
+local yank_group = augroup("HighlightYank", {})
 
-autocmd('TextYankPost', {
+autocmd("TextYankPost", {
   group = yank_group,
-  pattern = '*',
+  pattern = "*",
   callback = function()
     vim.highlight.on_yank({
-      higroup = 'IncSearch',
+      higroup = "IncSearch",
       timeout = 100,
     })
   end,
 })
 
-autocmd('BufWritePre', {
-  pattern = { '*.tsx', '*.ts', '*.jsx', '*.js' },
-  command = 'silent! EslintFixAll',
-  group = augroup('Format', {}),
+autocmd("BufWritePre", {
+  pattern = { "*.tsx", "*.ts", "*.jsx", "*.js" },
+  command = "silent! EslintFixAll",
+  group = augroup("FormatTS", {}),
+})
+
+autocmd("BufWritePre", {
+  pattern = { "*.lua" },
+  callback = function()
+    vim.lsp.buf.format()
+  end,
+  group = augroup("FormatLua", {}),
 })
