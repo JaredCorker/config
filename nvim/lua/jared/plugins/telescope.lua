@@ -51,6 +51,9 @@ return {
           oldfiles = {
             path_display = filenameFirst,
           },
+          lsp_references = {
+            path_display = filenameFirst,
+          },
         },
         extensions = {
           egrepify = {
