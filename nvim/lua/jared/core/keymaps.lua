@@ -24,9 +24,9 @@ keymap("n", "#", "#zz")
 
 keymap("n", "<leader>sh", ":set nohls<CR>")
 
-keymap({ "n", "v" }, "<leader>d", "\"_d")
-keymap({ "n", "v" }, "<leader>y", "\"+y")
-keymap("n", "<leader>Y", "\"+Y")
+keymap({ "n", "v" }, "<leader>d", '"_d')
+keymap({ "n", "v" }, "<leader>y", '"+y')
+keymap("n", "<leader>Y", '"+Y')
 
 keymap("n", "Q", "<nop>")
 
@@ -34,6 +34,14 @@ keymap("n", "<leader>sr", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>"
 
 keymap("n", "<leader>o", "o<Esc>k")
 keymap("n", "<leader>O", "O<Esc>j")
+
+keymap("n", "<leader>cl", 'yiwoconsole.log("<C-o>p", <C-o>p);<esc>', { desc = "Console log word under cursor" })
+keymap(
+  "n",
+  "<leader>cj",
+  'yiwoconsole.log("<C-o>p", JSON.stringify(<C-o>p));<esc>',
+  { desc = "Console log word under cursor" }
+)
 
 -- Insert mode
 keymap("i", "kj", "<Esc>")
@@ -43,4 +51,4 @@ keymap("v", "J", ":m '>+1<CR>gv=gv")
 keymap("v", "K", ":m '<-2<CR>gv=gv")
 
 -- X mode
-keymap("x", "<leader>p", "\"_dP")
+keymap("x", "<leader>p", '"_dP')
