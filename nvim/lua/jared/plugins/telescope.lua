@@ -38,7 +38,7 @@ return {
           mappings = {
             i = {
               ["<C-k>"] = actions.move_selection_previous, -- move to prev result
-              ["<C-j>"] = actions.move_selection_next, -- move to next result
+              ["<C-j>"] = actions.move_selection_next,     -- move to next result
               ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
             },
           },
@@ -59,13 +59,13 @@ return {
           egrepify = {
             -- intersect tokens in prompt ala "str1.*str2" that ONLY matches
             -- if str1 and str2 are consecutively in line with anything in between (wildcard)
-            AND = true,             -- default
-            permutations = false,   -- opt-in to imply AND & match all permutations of prompt tokens
-            lnum = true,            -- default, not required
-            lnum_hl = "EgrepifyLnum", -- default, not required, links to `Constant`
-            col = false,            -- default, not required
-            col_hl = "EgrepifyCol", -- default, not required, links to `Constant`
-            title = true,           -- default, not required, show filename as title rather than inline
+            AND = true,                   -- default
+            permutations = false,         -- opt-in to imply AND & match all permutations of prompt tokens
+            lnum = true,                  -- default, not required
+            lnum_hl = "EgrepifyLnum",     -- default, not required, links to `Constant`
+            col = false,                  -- default, not required
+            col_hl = "EgrepifyCol",       -- default, not required, links to `Constant`
+            title = true,                 -- default, not required, show filename as title rather than inline
             filename_hl = "EgrepifyFile", -- default, not required, links to `Title`
             -- suffix = long line, see screenshot
             -- EXAMPLE ON HOW TO ADD PREFIX!
