@@ -15,13 +15,12 @@ local plugins = "jared.plugins"
 local opts = {
   install = {
     colorscheme = {
-      "tokyonight"
-    }
+      "catppuccin",
+    },
   },
-	change_detection = {
-		notify = false,
-	},
+  change_detection = {
+    notify = false,
+  },
 }
-
 
 require("lazy").setup(plugins, opts)
