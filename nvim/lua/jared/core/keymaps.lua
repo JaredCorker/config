@@ -43,6 +43,9 @@ keymap(
   { desc = "Console log word under cursor" }
 )
 
+keymap("n", "<leader>vs", ":vs<CR>", { desc = "Open vertical split" })
+keymap("n", "<leader>cc", ":cclose<CR>", { desc = "Close qf list" })
+
 -- Insert mode
 keymap("i", "kj", "<Esc>")
 

@@ -3,6 +3,6 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   opts = {},
   keys = {
-    { "<leader>tt", ":Trouble<CR>", desc = "Open trouble" },
+    { "<leader>tt", ":TroubleToggle<CR>", desc = "Toggle trouble" },
   },
 }
