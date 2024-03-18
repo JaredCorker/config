@@ -43,6 +43,9 @@ keymap(
   { desc = "Console log word under cursor" }
 )
 
+keymap("n", "<leader>cfn", ":let @* = expand('%')<CR>", { desc = "Copy file name" })
+keymap("n", "<leader>cfp", ":let @* = expand('%:p')<CR>", { desc = "Copy file path" })
+
 keymap("n", "<leader>vs", ":vs<CR>", { desc = "Open vertical split" })
 keymap("n", "<leader>cc", ":cclose<CR>", { desc = "Close qf list" })
 
