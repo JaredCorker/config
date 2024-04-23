@@ -6,6 +6,7 @@ return {
     { "<leader>nh",  ":Gitsigns next_hunk<CR>",    desc = "Next hunk" },
     { "<leader>grh", ":Gitsigns reset_hunk<CR>",   desc = "Reset hunk" },
     { "<leader>grb", ":Gitsigns reset_buffer<CR>", desc = "Reset buffer" },
+    { "<leader>ph",  ":Gitsigns preview_hunk<CR>", desc = "Preview hunk" },
   },
   opts = {
     signs = {
