@@ -47,7 +47,10 @@ keymap("n", "<leader>cfn", ":let @* = expand('%')<CR>", { desc = "Copy file name
 keymap("n", "<leader>cfp", ":let @* = expand('%:p')<CR>", { desc = "Copy file path" })
 
 keymap("n", "<leader>vs", ":vs<CR>", { desc = "Open vertical split" })
+
 keymap("n", "<leader>cc", ":cclose<CR>", { desc = "Close qf list" })
+keymap("n", "<leader>cn", ":cnext<CR>", { desc = "Next qf item" })
+keymap("n", "<leader>cp", ":cprev<CR>", { desc = "Previous qf item" })
 
 -- Insert mode
 keymap("i", "kj", "<Esc>")
