@@ -12,7 +12,7 @@ return {
     local keymap = vim.keymap.set
 
     keymap("n", "<leader>hh", function()
-      harpoon:list():append()
+      harpoon:list():add()
     end, { desc = "Add file to harpoon" })
     keymap("n", "<leader>fh", function()
       harpoon.ui:toggle_quick_menu(harpoon:list())
