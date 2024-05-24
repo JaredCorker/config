@@ -8,7 +8,6 @@ return {
     opts = {
       ensure_installed = {
         "lua_ls",
-        "tsserver",
         "eslint",
       },
     },
@@ -52,11 +51,6 @@ return {
             },
           },
         },
-      })
-
-      lspconfig.tsserver.setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
       })
 
       lspconfig.eslint.setup({
