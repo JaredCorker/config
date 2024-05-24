@@ -11,7 +11,12 @@ return {
     "rcarriga/nvim-notify",
     "nvim-tree/nvim-web-devicons",
   },
-  opts = {
-    lang = "typescript",
-  },
+  config = function()
+    require("leetcode").setup({
+      lang = "typescript",
+    })
+
+    vim.keymap.set("n", "<leader>lr", "<cmd>Leet run<cr>", { desc = "Leetcode run" })
+    vim.keymap.set("n", "<leader>ls", "<cmd>Leet submit<cr>", { desc = "Leetcode submit" })
+  end,
 }
