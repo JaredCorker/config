@@ -26,8 +26,14 @@ autocmd("BufWritePre", {
   group = augroup("FormatLua", {}),
 })
 
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
+autocmd({ "BufEnter" }, {
   pattern = "/Users/jared.corker/.local/share/nvim/leetcode/*",
   command = "Copilot disable",
   group = augroup("DisableCopilot", {}),
+})
+
+autocmd({ "BufEnter" }, {
+  pattern = "*.env",
+  command = "LspStop",
+  group = augroup("StopLSP", {}),
 })
