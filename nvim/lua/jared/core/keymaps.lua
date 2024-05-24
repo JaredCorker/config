@@ -22,6 +22,9 @@ keymap("n", "N", "Nzz")
 keymap("n", "*", "*zz")
 keymap("n", "#", "#zz")
 
+keymap("n", "<leader>bn", "bnext", { desc = "Next buffer" })
+keymap("n", "<leader>bp", "bprev", { desc = "Prev buffer" })
+
 keymap("n", "<leader>sh", ":set nohls<CR>")
 
 keymap({ "n", "v" }, "<leader>d", '"_d')
