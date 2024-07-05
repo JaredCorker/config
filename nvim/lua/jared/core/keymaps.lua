@@ -10,8 +10,8 @@ keymap("n", "<C-h>", "<C-w>h")
 keymap("n", "<C-j>", "<C-w>j")
 keymap("n", "<C-k>", "<C-w>k")
 keymap("n", "<C-l>", "<C-w>l")
-keymap("n", "<leader>ss", ":w<CR>")
-keymap("n", "<leader>sa", ":wa<CR>")
+keymap("n", "<leader>sd", ":w<CR>", { desc = "Save buffer" })
+keymap("n", "<leader>sa", ":wa<CR>", { desc = "Save all" })
 keymap("n", "G", "Gzb")
 keymap("n", "<leader>G", "Gzb``")
 keymap("n", "J", "mzJ`z")
@@ -51,9 +51,13 @@ keymap("n", "<leader>cfp", ":let @* = expand('%:p')<CR>", { desc = "Copy file pa
 
 keymap("n", "<leader>vs", ":vs<CR>", { desc = "Open vertical split" })
 
+keymap("n", "<leader>co", ":copen<CR>", { desc = "Open qf list" })
 keymap("n", "<leader>cc", ":cclose<CR>", { desc = "Close qf list" })
 keymap("n", "<leader>cn", ":cnext<CR>", { desc = "Next qf item" })
 keymap("n", "<leader>cp", ":cprev<CR>", { desc = "Previous qf item" })
+
+keymap("n", "<leader>rp", "V$%d", { desc = "Remove paragraph" })
+keymap("n", "<leader>yp", "V$%y", { desc = "Yank paragraph" })
 
 -- Insert mode
 keymap("i", "kj", "<Esc>")
