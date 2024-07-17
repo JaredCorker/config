@@ -32,7 +32,7 @@ autocmd({ "BufEnter" }, {
   group = augroup("DisableCopilot", {}),
 })
 
-autocmd({ "BufEnter" }, {
+autocmd({ "LspAttach" }, {
   pattern = "*.env",
   command = "LspStop",
   group = augroup("StopLSP", {}),
