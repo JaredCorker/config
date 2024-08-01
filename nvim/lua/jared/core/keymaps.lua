@@ -69,3 +69,19 @@ keymap("v", "K", ":m '<-2<CR>gv=gv")
 
 -- X mode
 keymap("x", "<leader>p", '"_dP')
+
+-- Custom functions
+keymap("n", "<leader>so", function()
+  local file_to_open
+  local current_file = vim.fn.expand("%:p")
+  if current_file:match("spec") then
+    file_to_open = current_file:gsub("__tests__", ""):gsub("%.spec%.ts$", ".ts")
+  else
+    file_to_open = current_file:gsub("^(.-)([^/\\]+)%.ts$", "%1__tests__/%2.spec.ts")
+  end
+  if vim.fn.filereadable(file_to_open) == 1 then
+    vim.cmd("edit " .. file_to_open)
+  else
+    print("File not found: " .. file_to_open)
+  end
+end, { noremap = true })
