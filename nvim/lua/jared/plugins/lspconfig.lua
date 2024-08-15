@@ -18,20 +18,21 @@ return {
       local on_attach = function(_, bufnr)
         local keymap = vim.keymap.set
         local attach_opts = { silent = true, buffer = bufnr }
+        local buf = vim.lsp.buf
 
-        keymap("n", "gD", vim.lsp.buf.declaration, attach_opts)
-        keymap("n", "gd", vim.lsp.buf.definition, attach_opts)
-        keymap("n", "gh", vim.lsp.buf.hover, attach_opts)
-        keymap("n", "gi", vim.lsp.buf.implementation, attach_opts)
-        keymap("n", "<C-s>", vim.lsp.buf.signature_help, attach_opts)
-        keymap("n", "<leader>ca", vim.lsp.buf.code_action)
-        keymap("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, attach_opts)
-        keymap("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, attach_opts)
+        keymap("n", "gD", buf.declaration, attach_opts)
+        keymap("n", "gd", buf.definition, attach_opts)
+        keymap("n", "gh", buf.hover, attach_opts)
+        keymap("n", "gi", buf.implementation, attach_opts)
+        keymap("n", "<C-s>", buf.signature_help, attach_opts)
+        keymap("n", "<leader>ca", buf.code_action)
+        keymap("n", "<leader>wa", buf.add_workspace_folder, attach_opts)
+        keymap("n", "<leader>wr", buf.remove_workspace_folder, attach_opts)
         keymap("n", "<leader>wl", function()
-          print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+          print(vim.inspect(buf.list_workspace_folders()))
         end, attach_opts)
-        keymap("n", "<leader>D", vim.lsp.buf.type_definition, attach_opts)
-        keymap("n", "<leader>rn", vim.lsp.buf.rename, attach_opts)
+        keymap("n", "<leader>D", buf.type_definition, attach_opts)
+        keymap("n", "<leader>rn", buf.rename, attach_opts)
         keymap("n", "<leader>lr", ":LspRestart<CR>", attach_opts)
       end
 
