@@ -1,3 +1,6 @@
+-- https://github.com/hrsh7th/cmp-nvim-lsp
+-- https://github.com/L3MON4D3/LuaSnip
+-- https://github.com/hrsh7th/nvim-cmp
 return {
   {
     "hrsh7th/cmp-nvim-lsp",

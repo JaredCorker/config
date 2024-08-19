@@ -1,3 +1,4 @@
+-- https://github.com/dnlhc/glance.nvim
 return {
   "dnlhc/glance.nvim",
   keys = {

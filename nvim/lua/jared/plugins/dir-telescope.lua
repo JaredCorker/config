@@ -1,3 +1,4 @@
+-- https://github.com/princejoogie/dir-telescope.nvim
 return {
   "princejoogie/dir-telescope.nvim",
   -- telescope.nvim is a required dependency

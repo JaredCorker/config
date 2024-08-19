@@ -1,3 +1,10 @@
+-- https://github.com/kawre/leetcode.nvim
+-- https://github.com/nvim-telescope/telescope.nvim
+-- https://github.com/nvim-lua/plenary.nvim
+-- https://github.com/MunifTanjim/nui.nvim
+-- https://github.com/nvim-treesitter/nvim-treesitter
+-- https://github.com/rcarriga/nvim-notify
+-- https://github.com/nvim-tree/nvim-web-devicons
 return {
   "kawre/leetcode.nvim",
   build = ":TSUpdate html",

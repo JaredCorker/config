@@ -1,3 +1,4 @@
+-- https://github.com/goolord/alpha-nvim
 -- taken from https://github.com/kevinfengcs88/nvim/blob/master/lua/plugins/alpha.lua
 return {
   "goolord/alpha-nvim",
