@@ -59,6 +59,7 @@ keymap("n", "<leader>cp", ":cprev<CR>", { desc = "Previous qf item" })
 
 keymap("n", "<leader>rp", "V$%d", { desc = "Remove paragraph" })
 keymap("n", "<leader>yp", "V$%y", { desc = "Yank paragraph" })
+keymap("n", "<leader>dp", "V$%y$%o<Esc>p", { desc = "Duplicate paragraph" })
 
 keymap("n", "<leader>tb", ":Gitsigns toggle_current_line_blame<CR>", { desc = "Toggle current line blame" })
 
