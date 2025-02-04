@@ -63,6 +63,8 @@ keymap("n", "<leader>dp", "V$%y$%o<Esc>p", { desc = "Duplicate paragraph" })
 
 keymap("n", "<leader>tb", ":Gitsigns toggle_current_line_blame<CR>", { desc = "Toggle current line blame" })
 
+keymap("n", "<leader>pp", ":!pnpm run format --fix<CR>", { desc = "Format with prettier" })
+
 -- Insert mode
 keymap("i", "kj", "<Esc>")
 
